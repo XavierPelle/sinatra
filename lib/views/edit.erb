@@ -1,0 +1,24 @@
+<html>
+
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+
+  <body>
+
+  <% id = params['id'].to_i %>
+
+    <h1>PAGE POTIN</h1>
+    <h2>Voici la page du potin n°<%= id %> </h2>
+    <p> Son auteur : <%= gossip[id].author %> </p>
+    <p> Son auteur : <%= gossip[id].content %> </p>
+
+    <form action='/gossip/<%= id %>/edit/' method='POST'>
+    Saisi ici ton nom :  <input type='text' name='gossip_author'/><br/>
+    Balance modifie ton commentaire : <input type='text' name='gossip_content'/><br/>
+    <input type='submit'/>
+    </form>
+
+
+
+</html> 
